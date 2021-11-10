@@ -1,63 +1,18 @@
 {
-    "name": "tanzu-mgmt-controlplane-nsg",
-    "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg",
-    "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
+    "name": "tanzu-mgmt-node-nsg",
+    "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg",
+    "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
     "type": "Microsoft.Network/networkSecurityGroups",
     "location": "centralus",
     "properties": {
         "provisioningState": "Succeeded",
-        "resourceGuid": "d8746794-3f00-4c46-a9ca-001046fc9793",
-        "securityRules": [
-            {
-                "name": "allow_ssh",
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg/securityRules/allow_ssh",
-                "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
-                "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-                "properties": {
-                    "provisioningState": "Succeeded",
-                    "description": "Allow SSH",
-                    "protocol": "Tcp",
-                    "sourcePortRange": "*",
-                    "destinationPortRange": "22",
-                    "sourceAddressPrefix": "*",
-                    "destinationAddressPrefix": "*",
-                    "access": "Allow",
-                    "priority": 2200,
-                    "direction": "Inbound",
-                    "sourcePortRanges": [],
-                    "destinationPortRanges": [],
-                    "sourceAddressPrefixes": [],
-                    "destinationAddressPrefixes": []
-                }
-            },
-            {
-                "name": "allow_apiserver",
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg/securityRules/allow_apiserver",
-                "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
-                "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-                "properties": {
-                    "provisioningState": "Succeeded",
-                    "description": "Allow K8s API Server",
-                    "protocol": "Tcp",
-                    "sourcePortRange": "*",
-                    "destinationPortRange": "6443",
-                    "sourceAddressPrefix": "*",
-                    "destinationAddressPrefix": "*",
-                    "access": "Allow",
-                    "priority": 2201,
-                    "direction": "Inbound",
-                    "sourcePortRanges": [],
-                    "destinationPortRanges": [],
-                    "sourceAddressPrefixes": [],
-                    "destinationAddressPrefixes": []
-                }
-            }
-        ],
+        "resourceGuid": "c0e2cf09-4546-49f1-8a20-dd14e5c861f7",
+        "securityRules": [],
         "defaultSecurityRules": [
             {
                 "name": "AllowVnetInBound",
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg/defaultSecurityRules/AllowVnetInBound",
-                "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/AllowVnetInBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
                 "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
                 "properties": {
                     "provisioningState": "Succeeded",
@@ -78,8 +33,8 @@
             },
             {
                 "name": "AllowAzureLoadBalancerInBound",
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg/defaultSecurityRules/AllowAzureLoadBalancerInBound",
-                "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/AllowAzureLoadBalancerInBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
                 "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
                 "properties": {
                     "provisioningState": "Succeeded",
@@ -100,8 +55,8 @@
             },
             {
                 "name": "DenyAllInBound",
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg/defaultSecurityRules/DenyAllInBound",
-                "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/DenyAllInBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
                 "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
                 "properties": {
                     "provisioningState": "Succeeded",
@@ -122,8 +77,8 @@
             },
             {
                 "name": "AllowVnetOutBound",
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg/defaultSecurityRules/AllowVnetOutBound",
-                "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/AllowVnetOutBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
                 "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
                 "properties": {
                     "provisioningState": "Succeeded",
@@ -144,8 +99,8 @@
             },
             {
                 "name": "AllowInternetOutBound",
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg/defaultSecurityRules/AllowInternetOutBound",
-                "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/AllowInternetOutBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
                 "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
                 "properties": {
                     "provisioningState": "Succeeded",
@@ -166,8 +121,8 @@
             },
             {
                 "name": "DenyAllOutBound",
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-controlplane-nsg/defaultSecurityRules/DenyAllOutBound",
-                "etag": "W/\"84207665-7578-4b80-900e-418948365aef\"",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/DenyAllOutBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
                 "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
                 "properties": {
                     "provisioningState": "Succeeded",
@@ -189,7 +144,7 @@
         ],
         "subnets": [
             {
-                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/virtualNetworks/tanzu/subnets/tkg-mgmt-controlplane"
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/virtualNetworks/tanzu/subnets/tkg-mgmt-nodes"
             }
         ]
     }
