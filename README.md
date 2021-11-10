@@ -1,31 +1,3 @@
-# terraform-<provider>-<module name>
+# terraform-azurerm-tanzu-nsgs
 
-This repo will be used as a template for new Terraform module Github repos.
-
-<!-- BEGIN_TF_DOCS -->
-## Requirements
-
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-
-## Providers
-
-No providers.
-
-## Modules
-
-No modules.
-
-## Resources
-
-No resources.
-
-## Inputs
-
-No inputs.
-
-## Outputs
-
-No outputs.
-<!-- END_TF_DOCS -->
+This data-only module will return Azure NSG rules required for a Tanzu management cluster. It does not actually require the azurerm provider.

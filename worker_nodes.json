@@ -1,0 +1,151 @@
+{
+    "name": "tanzu-mgmt-node-nsg",
+    "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg",
+    "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
+    "type": "Microsoft.Network/networkSecurityGroups",
+    "location": "centralus",
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "c0e2cf09-4546-49f1-8a20-dd14e5c861f7",
+        "securityRules": [],
+        "defaultSecurityRules": [
+            {
+                "name": "AllowVnetInBound",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/AllowVnetInBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Allow inbound traffic from all VMs in VNET",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "VirtualNetwork",
+                    "destinationAddressPrefix": "VirtualNetwork",
+                    "access": "Allow",
+                    "priority": 65000,
+                    "direction": "Inbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowAzureLoadBalancerInBound",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/AllowAzureLoadBalancerInBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Allow inbound traffic from azure load balancer",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "AzureLoadBalancer",
+                    "destinationAddressPrefix": "*",
+                    "access": "Allow",
+                    "priority": 65001,
+                    "direction": "Inbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "DenyAllInBound",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/DenyAllInBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Deny all inbound traffic",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "*",
+                    "access": "Deny",
+                    "priority": 65500,
+                    "direction": "Inbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowVnetOutBound",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/AllowVnetOutBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "VirtualNetwork",
+                    "destinationAddressPrefix": "VirtualNetwork",
+                    "access": "Allow",
+                    "priority": 65000,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "AllowInternetOutBound",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/AllowInternetOutBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Allow outbound traffic from all VMs to Internet",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "Internet",
+                    "access": "Allow",
+                    "priority": 65001,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            },
+            {
+                "name": "DenyAllOutBound",
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/networkSecurityGroups/tanzu-mgmt-node-nsg/defaultSecurityRules/DenyAllOutBound",
+                "etag": "W/\"ef705998-1e6b-4397-b396-a3c38eea0e87\"",
+                "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "description": "Deny all outbound traffic",
+                    "protocol": "*",
+                    "sourcePortRange": "*",
+                    "destinationPortRange": "*",
+                    "sourceAddressPrefix": "*",
+                    "destinationAddressPrefix": "*",
+                    "access": "Deny",
+                    "priority": 65500,
+                    "direction": "Outbound",
+                    "sourcePortRanges": [],
+                    "destinationPortRanges": [],
+                    "sourceAddressPrefixes": [],
+                    "destinationAddressPrefixes": []
+                }
+            }
+        ],
+        "subnets": [
+            {
+                "id": "/subscriptions/e5c064d7-9c8f-4e8d-ba57-5da9f1610cb3/resourceGroups/tanzu-mgmt/providers/Microsoft.Network/virtualNetworks/tanzu/subnets/tkg-mgmt-nodes"
+            }
+        ]
+    }
+}
